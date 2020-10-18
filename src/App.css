@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color:aquamarine;
 }
 
 .App-logo {
@@ -27,7 +28,17 @@
 .App-link {
   color: #61dafb;
 }
+h1{
+  color: rgb(190, 88, 131);
+  font-family: cursive;
 
+}
+.user{
+  color:yellowgreen;
+  font-family: cursive;
+  
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
