@@ -6,6 +6,8 @@ import db from './firebase';
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
 import picture from './logoVatsuvaksi.jpg';
+import SendIcon from '@material-ui/icons/Send';
+import {IconButton} from '@material-ui/core';
 function App() {
   const [input, setInput] = useState('');              // State is a temporary memore to store the input (when the input is typed it is set again because setinput is called(event.target.value))            
   const [messages, setMessages] = useState([]);
@@ -43,11 +45,14 @@ function App() {
       <img src={picture} alt= 'logo'></img>
       <h1><i>Welcome to vatsuvaksi's messenger service </i></h1>
       <h2>hey, <span className="user"><i> {username} </i> </span></h2>
-      <form>                         {/*Why we added form? It is a simple trick so that when enter is hit the form will submit the message otherwise enter key won't work  */}
-        <FormControl>                {/*Used this from material UI */}
-          <InputLabel >Enter your message </InputLabel>
-          <Input value={input} onChange={event => setInput(event.target.value)} />
-          <Button disabled={!input} variant="contained" color="primary" type='submit' onClick={sendMessage}> Send messages</Button>   {/*disabled is used so that when you hit enter empty string dosen't pass on the array  */}
+      <form className="app_form">                         {/*Why we added form? It is a simple trick so that when enter is hit the form will submit the message otherwise enter key won't work  */}
+        <FormControl className= "app_formControl">                {/*Used this from material UI */}
+          
+          <Input className="app_input"placeholder="Enter your message" value={input} onChange={event => setInput(event.target.value)} />
+          <IconButton className="app_iconButton"
+          disabled={!input} variant="contained" color="primary" type='submit' onClick={sendMessage}
+          > <SendIcon/></IconButton>
+           {/*disabled is used so that when you hit enter empty string dosen't pass on the array  */}
         </FormControl>
       </form>
       {/*  Message component is used so that it can be manipulated in all the ways and used again and prop is used to pass the message in that component*/}

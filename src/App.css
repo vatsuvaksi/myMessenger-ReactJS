@@ -36,8 +36,26 @@ h1{
 .user{
   color:yellowgreen;
   font-family: cursive;
+}
+.app_form{
+  padding: 20px;
+  position:fixed;
+  bottom: 0;
+  background-color:rgba(115, 230, 143, 0.603);
+  z-index:1;
+  width:95%;
+  margin : 20px;
+}
+.app_formControl{
+display: flex !important;
+flex-direction:row !important;
+}
+.app_iconButton{
+flex:0;
+}
+.app_input{
   
-
+flex:1;
 }
 @keyframes App-logo-spin {
   from {
