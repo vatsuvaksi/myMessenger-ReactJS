@@ -4,6 +4,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with firebase along with real time Database!
 
+This is fun online chat system where you can find new friends and chat with them. It allows the user to re-connect after entering with the same name because of the key component added in the project as well as the the firebase cloud, so any user can leave the chat and re-enter to see his old messages segregated out from the others just like the facebook messenger.
+
+
+**Enjoy the chat and share but keep the messages clean for other users**
+
 ## Available Scripts
 
 In the project directory, you can run:
